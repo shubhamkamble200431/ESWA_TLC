@@ -137,8 +137,10 @@ python utils/resample_7264_5.py --src data/test.sa --tgt data/test.hi \
 ## Metrics
 
 | Metric | Description | Target |
-|--------|-------------|--------|
-| BLEU | corpus_bleu (flores200 tokenizer) | Higher is better |
-| chrF++ | character F-score with word order | Higher is better |
-| COMET | neural MT metric (wmt22-comet-da) | Higher is better |
-| Length Ratio | pred_len / ref_len per bucket | ~1.0 |
+|----------|-------------|----------|
+| BLEU | corpus_bleu (FLORES-200 tokenizer) | Higher is better |
+| chrF2 | Character n-gram F-score with word order information | Higher is better |
+| TER | Translation Edit Rate; measures the number of edits required to transform a hypothesis into the reference translation | Lower is better |
+| METEOR | Alignment-based metric incorporating exact, stem, synonym, and paraphrase matches | Higher is better |
+| COMET | Neural MT evaluation metric (wmt22-comet-da) | Higher is better |
+| BERTScore-F1 (BSF) | Semantic similarity measured using contextual embeddings and reported as the BERTScore F1 value | Higher is better |
