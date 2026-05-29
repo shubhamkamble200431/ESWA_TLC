@@ -1,0 +1,17 @@
+mkdir mT5_sanhin
+cd mT5_sanhin
+
+TRAINING mT5_sanhin
+
+python ./transformers/examples/pytorch/translation/run_translation.py      --model_name_or_path google/mt5-base     --do_train --do_eval     --source_lang sa     --target_lang hi  --source_prefix "<2hi> "  --train_file ./data/train/train.json --validation_file ./data/dev/dev.json  --test_file ./data/test/test.json --output_dir checkpoint/     --per_device_train_batch_size=8     --per_device_eval_batch_size=8     --num_train_epochs 30  --predict_with_generate  --save_strategy no --metric_for_best_model bleu --overwrite_output_dir --logging_dir ./log --report_to tensorboard
+
+
+ Inference mT5_65K_sanhin
+ 
+python ./transformers/examples/pytorch/translation/run_translation.py --model_name_or_path checkpoint/mT5_65k_sanhin/  --do_predict  --source_lang sa --target_lang hi  --validation_file ./data/test/test.json  --test_file ./data/test/test.json  --output_dir  test_predictions_1452/ --per_device_eval_batch_size=4 --predict_with_generate --overwrite_output_dir
+
+
+
+
+ 
+
