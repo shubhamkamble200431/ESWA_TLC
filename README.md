@@ -1,4 +1,4 @@
-# Learning Decoder When to Stop: Improving Long-Sequence Translation via Token-Length Conditioning in Low-Resource Indic Neural Machine Translation
+# Learning the Decoder When to Stop: Improving Long-Sequence Neural Machine Translation via Token-Length Conditioning in Low-Resource Indic Languages
 
 Fine-tuning NLLB-200-distilled-600M for Sanskrit (Devanagari) → Hindi translation with uniform quality across sentence-length buckets.
 
