@@ -17,7 +17,7 @@ ESWA_TLC/
 │   ├── data/                 # Dataset, sampler, augmentation
 │   ├── models/               # Model builder, RoPE, ALiBi, hierarchical encoder
 │   ├── training/             # Trainer, curriculum, loss
-│   ├── evaluation/           # Metrics (BLEU/chrF/COMET), evaluate, plots
+│   ├── evaluation/           # Metrics (BLEU/chrF2/TER/COMET/METEOR/BERTScore-F), evaluate, plots
 │   └── scripts/              # Back-translation utility
 ├── baseline_models/          # mBART50, mT5, IndicTrans2, NLLB-200M, Mamba
 ├── calculate_metrics/        # Post-hoc evaluation on saved prediction TSVs
